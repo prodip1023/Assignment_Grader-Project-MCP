@@ -1,11 +1,14 @@
 import openai
 import requests
 import sys
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 # Your API keys
-OPENAI_API_KEY = "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"
-GOOGLE_API_KEY = "AIzaSyAJdNRcZTU2a19yw59-mp2kGm_iLLArXUk"
-GOOGLE_CX = "b2cc66cf8a84f48ab"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_CX = os.getenv("GOOGLE_CX")
 SERVER_URL = "http://localhost:8088"
 
 print("=== Testing API Keys ===")
